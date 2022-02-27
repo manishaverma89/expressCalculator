@@ -22,7 +22,7 @@ const bodyParser = require("body-parser");                          //require bo
 app.use(bodyParser.urlencoded({extended:true }));         //because body-parser works with express
 
 app.get("/" , function(req, res){     //step9
-  res.sendFile(__dirname + "/index.html");                 //step10
+  res.sendFile(__dirname + "/index.html");                 
 });
 
 app.post("/" , function(req,res){
@@ -39,3 +39,8 @@ app.listen(3000 , function(){         //step11
 });
 
 
+// bodyParser.urlencoded :-
+// Special one that we use when we’re trying to parse data that comes from an html form.
+// So whenever you’re trying to grab the information that gets posted to your server from an html form , you’re going to be using urlencoded.
+
+// {extended:true} allows us to post nested objects
